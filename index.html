@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RocketShooter</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+  <link rel="shortcut icon" href="icon.png">
+
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "PT Serif", "Georgia", serif;
+  }
+  :root {
+    --main: #8E44AD;
+  }
+  div.container {
+    text-align: left;
+    display: inline-block;
+    width: 650px;
+    padding: 2.5rem 1.5rem;
+    box-sizing: border-box;
+  }
+  div.container > h1, div.container > p {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  div.container > h1 {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 650px) {
+    div.container {
+      width: 100%;
+    }
+  }
+  div.controls {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  div.controls h2 {
+    margin-bottom: 0.5rem;
+  }
+  div.controls p {
+    line-height: 1.75;
+  }
+  body {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RocketShooter</h1>
+    <p>Shoot the enemy ship without getting shot yourself!</p>
+    <div class="controls">
+      <h2>Controls</h2>
+      <p><strong>Space</strong> &mdash; shoot</p>
+      <p><strong>Arrow Keys</strong> &mdash; move</p>
+    </div>
+    <div class="game">
+      <div class="enemy_health_bar">
+        <div class="enemy_health"></div>
+      </div>
+      <canvas></canvas>
+      <div class="player_health_bar">
+        <div class="player_health"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
