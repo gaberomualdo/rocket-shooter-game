@@ -20,8 +20,8 @@
   div.container {
     text-align: left;
     display: inline-block;
-    width: 650px;
-    padding: 2.5rem 1.5rem;
+    width: 500px;
+    padding: 1.75rem 1.5rem;
     box-sizing: border-box;
   }
   div.container > h1, div.container > p {
@@ -31,17 +31,18 @@
   div.container > h1 {
     font-size: 2.5rem;
   }
-  @media (max-width: 650px) {
+  @media (max-width: 500px) {
     div.container {
       width: 100%;
     }
   }
   div.controls {
-    margin-top: 2rem;
-    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   div.controls h2 {
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
   div.controls p {
     line-height: 1.75;
@@ -49,12 +50,21 @@
   body {
     text-align: center;
   }
+  div.game {
+    overflow: auto;
+  }
+  canvas {
+    display: block;
+    float: left;
+  }
   div.game div.health {
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
     background-color: #dedede;
-    height: 1.75rem;
+    height: 1.25rem;
     display: block;
     width: 100%;
+    float: left;
+    clear: both;
   }
   div.game div.health div {
     background-color: #27ae60;
@@ -62,7 +72,7 @@
     display: block;
     float: left;
     width: 100%;
-    transition: width 0.15s;
+    transition: width 0.25s;
   }
   canvas {
     width: 100%;
@@ -71,21 +81,26 @@
   </style>
 </head>
 <body>
+  <div class="images" style="display: none;">
+    <img src="rocket.png" alt="" class="rocket">
+    <img src="enemy.png" alt="" class="enemy">
+    <img src="rocket_bullets.png" alt="" class="rocket_bullets">
+    <img src="enemy_bullets.png" alt="" class="enemy_bullets">
+  </div>
   <div class="container">
     <h1>RocketShooter</h1>
     <p>Shoot the enemy ship without getting shot yourself!</p>
     <div class="controls">
       <h2>Controls</h2>
-      <p><strong>Space</strong> &mdash; shoot</p>
-      <p><strong>Arrow Keys</strong> &mdash; move</p>
+      <p><strong>Space</strong> &mdash; shoot, <strong>Arrow Keys</strong> &mdash; move</p>
     </div>
     <div class="game">
       <div class="enemy_health_bar health">
         <div class="enemy_health"></div>
       </div>
       <canvas></canvas>
-      <div class="player_health_bar health">
-        <div class="player_health"></div>
+      <div class="rocket_health_bar health">
+        <div class="rocket_health"></div>
       </div>
     </div>
   </div>
