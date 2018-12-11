@@ -35,6 +35,9 @@
     div.container {
       width: 100%;
     }
+    canvas {
+      zoom: 75%;
+    }
   }
   div.controls {
     margin-top: 1.5rem;
@@ -127,8 +130,8 @@
         <div class="rocket_health"></div>
       </div>
       <div class="btns">
-        <button class="left" onclick="document.onkeydown({keyCode: 37});setTimeout(function(){document.onkeyup({keyCode: 37});}, 50);">Move Left</button>
-        <button class="right" onclick="document.onkeydown({keyCode: 39});setTimeout(function(){document.onkeyup({keyCode: 39});}, 50);">Move Right</button>
+        <button class="left" onclick="document.onkeydown({keyCode: 37});setTimeout(function(){document.onkeyup({keyCode: 37});}, 75);">Move Left</button>
+        <button class="right" onclick="document.onkeydown({keyCode: 39});setTimeout(function(){document.onkeyup({keyCode: 39});}, 75);">Move Right</button>
         <button class="shoot" onclick="document.onkeydown({keyCode: 32})">Shoot</button>
       </div>
     </div>
