@@ -49,6 +49,25 @@
   body {
     text-align: center;
   }
+  div.game div.health {
+    margin: 0.25rem 0;
+    background-color: #dedede;
+    height: 1.75rem;
+    display: block;
+    width: 100%;
+  }
+  div.game div.health div {
+    background-color: #27ae60;
+    height: 100%;
+    display: block;
+    float: left;
+    width: 100%;
+    transition: width 0.15s;
+  }
+  canvas {
+    width: 100%;
+  }
+
   </style>
 </head>
 <body>
@@ -61,14 +80,15 @@
       <p><strong>Arrow Keys</strong> &mdash; move</p>
     </div>
     <div class="game">
-      <div class="enemy_health_bar">
+      <div class="enemy_health_bar health">
         <div class="enemy_health"></div>
       </div>
       <canvas></canvas>
-      <div class="player_health_bar">
+      <div class="player_health_bar health">
         <div class="player_health"></div>
       </div>
     </div>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
