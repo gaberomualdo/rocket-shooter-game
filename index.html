@@ -77,6 +77,30 @@
   canvas {
     width: 100%;
   }
+  div.btns {
+    display: block;
+    width: 100%;
+  }
+  div.btns button {
+    width: 33.33%;
+    margin: 0;
+    display: block;
+    float: left;
+    border: none;
+    background-color: #dedede;
+    box-sizing: border-box;
+    height: 3rem;
+    font-size: 1rem;
+    outline: none;
+  }
+  div.btns button:active {
+    background-color: #ccc;
+  }
+  div.btns button:nth-child(2){
+    border: 3px solid #fff;
+    border-top: none;
+    border-bottom: none;
+  }
 
   </style>
 </head>
@@ -101,6 +125,11 @@
       <canvas></canvas>
       <div class="rocket_health_bar health">
         <div class="rocket_health"></div>
+      </div>
+      <div class="btns">
+        <button class="left" onmousedown="document.onkeydown({keyCode: 37});"  onmouseup="document.onkeyup({keyCode: 37});">Move Left</button>
+        <button class="right" onmousedown="document.onkeydown({keyCode: 39});"  onmouseup="document.onkeyup({keyCode: 39});">Move Right</button>
+        <button class="shoot" onclick="document.onkeydown({keyCode: 32})">Shoot</button>
       </div>
     </div>
   </div>
